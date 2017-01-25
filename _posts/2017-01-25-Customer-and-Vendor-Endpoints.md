@@ -74,6 +74,19 @@ Moreover, you can go through partners API to access related documents:
 
 ## Details
 ### GET /businesses/{business_id}/partners/
+List all business partners of given business sorted by partner name. Default page length is 100. If per_page = 50 and page = 2, the response message will show 101st - 150th partners. 
+##### URL parameters
+| Endpoint                          | Type          | Description                                   |
+| -------------                     | -----         | -----                                         |
+| per_page                          | integer       | Number of partners listed in one response message. Upper limit is 100. |
+| page                              | integer       | Page number of partners listed in response message. Start from 0. |
+
+##### Example Request
+curl https://myaccounting.pymlo.com/businesses/dd921fea-bef8-4281-a400-abefe265b601/partners/ \
+  -H "Authorization: Bearer ACCESS_TOKEN"
+  
+##### Example Response
+
 
 ### GET /businesses/{business_id}/partners/{partner_id}/
 
