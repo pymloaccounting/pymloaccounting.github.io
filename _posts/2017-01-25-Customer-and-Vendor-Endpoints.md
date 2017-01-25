@@ -33,7 +33,43 @@ Moreover, you can go through partners API to access related documents:
 | /businesses/{business_id}/partners/{partner_id}/expenses/       |  Deal with expenses paid to a business partner |
 
 ## Attributes
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut neque sit amet neque facilisis condimentum. Suspendisse posuere risus at mi lacinia, ac cursus turpis dignissim. Vivamus non dictum felis. Ut tincidunt augue id ullamcorper vestibulum.
+| Endpoint                          | Type          | Description                                   |
+| -------------                     | -----         | -----                                         |
+| id                                | string        | Unique identifier of a partner. Read only. You can use id to interact with specific business partner. |
+| name                              | string        | Name of a business partner.                   |
+| code                              | string        | Code in your business to represent a partner. |
+| sell                              | boolean       | True if you sell product to a partner.        |
+| buy                               | boolean       | True if you buy product from a partner.       |
+| default_selling_currency          | string        | Default currency when selling to a partner. Use ISO currency code. |
+| default_buying_currency           | string        | Default currency when buying from a partner. Use ISO currency code. |
+| contact_name                      | string        | The person you contact with when interacting with a business partner. |
+| business_id                       | string        | Business id of a partner.                     |
+| phone                             | string        | Phone number of a partner.                    |
+| fax                               | string        | Fax number of a partner.                      |
+| website                           | string        | Website of a partner.                         |
+| email                             | string        | Email of a partner.                           |
+| note                              | string        | Any note to describe a partner.               |
+| head_quarter                      | boolean       | True if a partner is the head quarter of business.|
+| billing_site_number               | string        | If a partner is a branch of larger business, specify branch number. |
+| billing_addr_line1                | string        |                                          |
+| billing_addr_line2                | string        |                                          |
+| billing_addr_city                 | string        |                                          |
+| billing_addr_province             | string        |                                          |
+| billing_addr_postal_code          | string        |                                          |
+| billing_addr_country_id           | string        |                                          |
+| Name                              | string        |                                          |
+| billing_addr_line1                | string        |                                          |
+| billing_addr_line2                | string        |                                          |
+| billing_addr_city                 | string        |                                          |
+| billing_addr_province             | string        |                                          |
+| billing_addr_postal_code          | string        |                                          |
+| billing_addr_country_id           | string        |                                          |
+| billing_addr_line1                | string        |                                          |
+| billing_addr_line2                | string        |                                          |
+| billing_addr_city                 | string        |                                          |
+| billing_addr_province             | string        |                                          |
+| billing_addr_postal_code          | string        |                                          |
+| billing_addr_country_id           | string        |                                          |
 
 
 ## Details
