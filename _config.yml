@@ -1,9 +1,9 @@
 full_rebuild: true
 name: Pymlo Accounting
 author: Logan Lo
-url: https://pymloaccounting.github.io/pymloaccounting
+url: https://pymloaccounting.github.io
 repository: https://github.com/pymloaccounting/pymloaccounting.github.io
-branch: api-spec
+branch: master
 version: 1.3
 encoding: utf-8
 themes:
