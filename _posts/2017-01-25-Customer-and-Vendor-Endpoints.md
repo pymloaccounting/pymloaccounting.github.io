@@ -1,20 +1,53 @@
 ---
-
 layout: index
 title:  "Customer and Vendor Endpoints"
 date:   2017-01-25
 categories: api-endpoints
-
 ---
 
 <header>
 <h1>Customer and Vendor Endpoints</h1>
 </header>
 
-## Section 1
+The management of customers and vendors is included in business "partners" API endpoint. A partner must have a "name", 
+where other fields are optional.
 
-### Vivamus ac auctor eros
+## Overview
+| Endpoint                                                        |  Description  |
+| -------------                                                   | ----- |
+| [GET /businesses/{business_id}/partners/](#get-businessesbusiness_idpartners)  | Get a list of business partners from given business |
+| [GET /businesses/{business_id}/partners/{partner_id}/](#get-businessesbusiness_idpartnerspartner_id) |  Get a specific business partner |
+| [POST /businesses/{business_id}/partner/](#post-businessesbusiness_idpartner) |  Create a new business partner for given business |
+| [PUT /businesses/{business_id}/partners/](#put-businessesbusiness_idpartners) |  Update an existing business partner |
+| [DELETE /businesses/{business_id}/partners/{partner_id}/](#delete-businessesbusiness_idpartnerspartner_id) |  Delete a business partner |  
+
+Moreover, you can go through partners API to access related documents: 
+
+| Endpoint                                                        |  Description  |
+| -------------                                                   | ----- |
+| /businesses/{business_id}/partners/{partner_id}/quotes/         |  Deal with quotes sent to a business partner |
+| /businesses/{business_id}/partners/{partner_id}/invoices/       |  Deal with invoices sent to a business partner |
+| /businesses/{business_id}/partners/{partner_id}/receipts/       |  Deal with receipts paid by a business partner |
+| /businesses/{business_id}/partners/{partner_id}/pos/            |  Deal with purchase orders sent to a business partner |
+| /businesses/{business_id}/partners/{partner_id}/bills/          |  Deal with vendor bills paid to a business partner |
+| /businesses/{business_id}/partners/{partner_id}/expenses/       |  Deal with expenses paid to a business partner |
+
+## Attributes
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut neque sit amet neque facilisis condimentum. Suspendisse posuere risus at mi lacinia, ac cursus turpis dignissim. Vivamus non dictum felis. Ut tincidunt augue id ullamcorper vestibulum.
+
+
+## Details
+### GET /businesses/{business_id}/partners/
+
+### GET /businesses/{business_id}/partners/{partner_id}/
+
+### POST /businesses/{business_id}/partner/ 
+
+### PUT /businesses/{business_id}/partners/
+
+### DELETE /businesses/{business_id}/partners/{partner_id}/
+
+
 
 ### In erat ligula
 
