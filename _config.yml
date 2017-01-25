@@ -1,6 +1,6 @@
 full_rebuild: true
-name: Photon Book Creator
-author: Cédric Soulas
+name: Pymlo Accounting
+author: Logan Lo
 url: https://pymloaccounting.github.io/pymloaccounting
 repository: https://github.com/pymloaccounting/pymloaccounting.github.io
 branch: api-spec
