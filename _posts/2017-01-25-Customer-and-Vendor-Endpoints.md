@@ -51,25 +51,25 @@ Moreover, you can go through partners API to access related documents:
 | note                              | string        | Any note to describe a partner.               |
 | head_quarter                      | boolean       | True if a partner is the head quarter of business.|
 | billing_site_number               | string        | If a partner is a branch of larger business, specify branch number. |
-| billing_addr_line1                | string        |                                          |
-| billing_addr_line2                | string        |                                          |
-| billing_addr_city                 | string        |                                          |
-| billing_addr_province             | string        |                                          |
-| billing_addr_postal_code          | string        |                                          |
-| billing_addr_country_id           | string        |                                          |
-| Name                              | string        |                                          |
-| billing_addr_line1                | string        |                                          |
-| billing_addr_line2                | string        |                                          |
-| billing_addr_city                 | string        |                                          |
-| billing_addr_province             | string        |                                          |
-| billing_addr_postal_code          | string        |                                          |
-| billing_addr_country_id           | string        |                                          |
-| billing_addr_line1                | string        |                                          |
-| billing_addr_line2                | string        |                                          |
-| billing_addr_city                 | string        |                                          |
-| billing_addr_province             | string        |                                          |
-| billing_addr_postal_code          | string        |                                          |
-| billing_addr_country_id           | string        |                                          |
+| billing_addr_line1                | string        | First line of partner address that you send quotes and invoices to. |
+| billing_addr_line2                | string        | Second line of partner address that you send quotes and invoices to. |
+| billing_addr_city                 | string        | City of partner address that you send quotes and invoices to. |
+| billing_addr_province             | string        | Province of partner address that you send quotes and invoices to. |
+| billing_addr_postal_code          | string        | Postal code of partner address that you send quotes and invoices to. |
+| billing_addr_country_id           | string        | Country code of partner address that you send quotes and invoices to. Use ISO country code. |
+| ship_to_contact_name              | string        | If you need shipping goods to customer, fill the contact person to receive in this field. |
+| shipping_addr_line1               | string        | First line of partner address that will receive shipping goods. |
+| shipping_addr_line2               | string        | Second line of partner address that will receive shipping goods.|
+| shipping_addr_city                | string        | City of partner address that will receive shipping goods. |
+| shipping_addr_province            | string        | Province of partner address that will receive shipping goods. |
+| shipping_addr_postal_code         | string        | Postal code of partner address that will receive shipping goods. |
+| shipping_addr_country_id          | string        | Country code of partner address that will receive shipping goods. Use ISO country code. |
+| vendor_addr_line1                 | string        | First line of partner address that you buy products/services from. |
+| vendor_addr_line2                 | string        | Second line of partner address that you buy products/services from. |
+| vendor_addr_city                  | string        | City of partner address that you buy products/services from. |
+| vendor_addr_province              | string        | Province of partner address that you buy products/services from. |
+| vendor_addr_postal_code           | string        | Postal code of partner address that you buy products/services from. |
+| vendor_addr_country_id            | string        | Country code of partner address that you buy products/services from. Use ISO country code. |
 
 
 ## Details
