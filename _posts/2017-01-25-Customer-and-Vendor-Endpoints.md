@@ -1,8 +1,14 @@
 ---
+
+layout: index
+title:  "Customer and Vendor Endpoints"
+date:   2017-01-25
+categories: api-endpoints
+
 ---
 
 <header>
-<h1>Lorem ipsum dolor sit amet</h1>
+<h1>Customer and Vendor Endpoints</h1>
 </header>
 
 ## Section 1
