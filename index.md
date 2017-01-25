@@ -7,12 +7,9 @@ title: index
 <h1>Introduction</h1>
 </header>
 
-## Sed eget 
+Pymlo API is the interface helping you deal with Pymlo data with JSON. Binding business operations with Pymlo can let most 
+accounting procedures go automatic, ex. creating a customer when your user registers, creating an invoice when user makes purchase, or integrating with third party service providers.
 
-Tellus elit, eget convallis felis sollicitudin. Nullam et erat ut tellus vestibulum ornare. Aliquam dictum blandit cursus. Vestibulum lectus risus, dignissim suscipit gravida sit amet, porta quis metus. Maecenas et vulputate dui. Maecenas non scelerisque nibh, ac suscipit augue. Aenean sed iaculis odio.
-
-- [Duis laoreet](page-1.html)
-- [Cras a neque nibh](page-1.html)
-- [Pellentesque](page-1.html)
-
-<img src="http://placehold.it/800x300">
+Before start accessing Pymlo API, please
+- Register a Pymlo application on Pymlo developer page.
+- Refer to OAuth2 page for authentication.
