@@ -22,7 +22,7 @@ Other fields are optional. If you use "code" for managing products, it should be
 | -------------                                                   | ----- |
 | [GET /businesses/{business_id}/products/](#get-businessesbusiness_idproducts) | Get a list of products from given business |
 | [GET /businesses/{business_id}/products/{product_id}/](#get-businessesbusiness_idproductsproduct_id) |  Get a specific product |
-| [POST /businesses/{business_id}/products/](#post-businessesbusiness_idproduct) |  Create a new product for given business |
+| [POST /businesses/{business_id}/products/](#post-businessesbusiness_idproducts) |  Create a new product for given business |
 | [PUT /businesses/{business_id}/products/](#put-businessesbusiness_idproducts) |  Update an existing product |
 | [DELETE /businesses/{business_id}/products/{product_id}/](#delete-businessesbusiness_idproductsproduct_id) |  Delete a product |  
 
