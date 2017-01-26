@@ -38,8 +38,8 @@ Moreover, you can go through partners API to access related documents:
 | id                                | string        | Unique identifier of a partner. Read only. You can use id to interact with specific business partner. |
 | name                              | string        | Name of a business partner.                   |
 | code                              | string        | Code in your business to represent a partner. |
-| sell                              | boolean       | True if you sell product to a partner.        |
-| buy                               | boolean       | True if you buy product from a partner.       |
+| customer                          | boolean       | True if you sell product to a partner.        |
+| vendor                            | boolean       | True if you buy product from a partner.       |
 | default_selling_currency          | string        | Default currency when selling to a partner. Use ISO currency code. |
 | default_buying_currency           | string        | Default currency when buying from a partner. Use ISO currency code. |
 | contact_name                      | string        | The person you contact with when interacting with a business partner. |
@@ -82,88 +82,71 @@ List all business partners of given business sorted by partner name. Default pag
 | page                              | integer       | Page number of partners listed in response message. Start from 0. |
 
 ##### Example Request
-curl https://myaccounting.pymlo.com/businesses/dd921fea-bef8-4281-a400-abefe265b601/partners/ \
-  -H "Authorization: Bearer ACCESS_TOKEN"
-  
+```JavaScript
+curl https://myaccounting.pymlo.com/businesses/dd921fea/partners?per_page=50&page=2 \
+
+-H "Authorization: Bearer ACCESS_TOKEN"
+```
+
+##### Example Response
+
+### GET /businesses/{business_id}/partners/{partner_id}/
+Get a specific business partner.
+
+##### Example Request
+```JavaScript
+curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/bef8/ \ 
+
+-H "Authorization: Bearer ACCESS_TOKEN"
+```
+
+##### Example Response
+
+### POST /businesses/{business_id}/partner/ 
+Create a new business partner for given business.
+
+##### Example Request
+```JavaScript
+curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/ \
+  -H "Authorization: Bearer ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -X POST \
+  -d {
+    "name": "Susan",
+    "email": "susan@gmail.com",
+    "customer": true
+  }
+```
 ##### Example Response
 
 
-### GET /businesses/{business_id}/partners/{partner_id}/
-
-### POST /businesses/{business_id}/partner/ 
-
 ### PUT /businesses/{business_id}/partners/
+Update an existing business partner. Please upload **whole partner data** include unmodified fields.
 
-### DELETE /businesses/{business_id}/partners/{partner_id}/
-
-
-
-### In erat ligula
-
-In auctor tellus eu metus pellentesque, quis facilisis nibh placerat. Commodo in lorem eget, vulputate bibendum ante. Etiam vestibulum quis diam a dapibus. Integer fermentum nec purus sed dictum. Donec fermentum et sapien eget suscipit. Fusce consequat est a ex molestie ultrices.
-
-<img src="http://placehold.it/800x600">
-
-## Section 2
-
-Donec dictum hendrerit rutrum: 
-
-> Proin ultrices hendrerit vestibulum. Curabitur non placerat metus. Donec suscipit ligula et aliquam semper. Fusce sed imperdiet augue. Suspendisse potenti. Cras vestibulum, metus et vulputate ornare, ante libero gravida felis, a bibendum magna felis ut tortor.
-
-<img src="http://placehold.it/800x600">
-
-## Section 3
-
-Sed molestie augue libero, eget suscipit velit euismod ullamcorper.
-
-`fibonacci.js`:
-
-```javascript
-var Fib = {
-    [Symbol.iterator]() {
-        var n1 = 1, n2 = 1;
-
-        return {
-            // make the iterator an iterable
-            [Symbol.iterator]() { return this; },
-
-            next() {
-                var current = n2;
-                n2 = n1;
-                n1 = n1 + current;
-                return { value: current, done: false };
-            },
-
-            return(v) {
-                console.log(
-                    "Fibonacci sequence abandoned."
-                );
-                return { value: v, done: true };
-            }
-        };
-    }
-};
-
-for (var v of Fib) {
-    console.log( v );
-
-    if (v > 50) break;
-}
-// 1 1 2 3 5 8 13 21 34 55
-// Fibonacci sequence abandoned.
+##### Example Request
+```JavaScript
+curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/ \
+  -H "Authorization: Bearer ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -X POST \
+  -d {
+    "id": "bef8",
+    "name": "Susan",
+    "email": "susan@gmail.com",
+    "customer": true
+ }
 ```
 
-## Section 4
+##### Example Response
 
-### Pellentesque lobortis volutpat maximus 
+### DELETE /businesses/{business_id}/partners/{partner_id}/
+Delete a business partner.
 
-Etiam condimentum:
+##### Example Request
+```JavaScript
+curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/bef8/ \
+  -H "Authorization: Bearer ACCESS_TOKEN"
+  -X DELETE
+```
 
-- orci non consequat elementum
-- tortor tellus viverra neque
-- id dignissim nibh nisl id magna
-- suspendisse aliquet dolor vehicula velit imperdiet
-
-Suspendisse pretium molestie metus a consectetur. Sed nec interdum magna. Suspendisse efficitur, mi eget finibus mollis, orci tortor dignissim nisi, non vestibulum velit tellus ut odio. Praesent vitae sapien varius, mollis nunc vel, interdum nunc.
-
-<img src="http://placehold.it/800x600">
+##### Example Response
