@@ -20,8 +20,9 @@ When a quote is created, it will be "Draft". Please sign in Pymlo web system to 
 | Endpoint                                                        |  Description  |
 | -------------                                                   | ----- |
 | [GET /businesses/{business_id}/quotes/](#get-businessesbusiness_idquotes) | Get a list of quotes from given business |
-| [GET /businesses/{business_id}/quotes/{quote_id}/](#get-businessesbusiness_idquotesquotet_id) |  Get a specific quote |
-| [POST /businesses/{business_id}/quotes/](#post-businessesbusiness_idquotes) |  Create a new quote for given business |
+| [GET /businesses/{business_id}/partners/{partner_id}/quotes/](#get-businessesbusiness_idpartnerspartner_idquotes) | Get a list of quotes from given partner and business |
+| [GET /businesses/{business_id}/quotes/{quote_id}/](#get-businessesbusiness_idquotesquote_id) |  Get a specific quote |
+| [POST /businesses/{business_id}/partners/{partner_id}/quotes/](#post-businessesbusiness_idpartnerspartner_idquotes) |  Create a new quote for given partner and business |
 | [PUT /businesses/{business_id}/quotes/](#put-businessesbusiness_idquotes) |  Update an existing quote |
 | [DELETE /businesses/{business_id}/quotes/{quote_id}/](#delete-businessesbusiness_idquotesquote_id) |  Delete a quote |  
 
@@ -43,22 +44,36 @@ When a quote is created, it will be "Draft". Please sign in Pymlo web system to 
 
 ## Details
 ### GET /businesses/{business_id}/quotes/
-List all quotes of given business sorted by date created. You can use "from_date", "to_date", and "quote_no" as filters.
+List all quotes of given business sorted by date created. 
+### GET /businesses/{business_id}/partners/{partner_id}/quotes/
+List all quotes of given partner and business sorted by date created. 
+
+You can use "from_date", "to_date", and "quote_no" as filters.
 
 Default page length is 100. If per_page = 50 and page = 2, the response message will show 101st - 150th quotes. 
 
 ##### URL parameters
 | Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
-| from_date                         | string        | Find only quotes created after specific date. |
-| to_date                           | string        | Find only quotes created before specific date.|
-| quote_no                          | string        | Find quote having matched quote number.       |
+| from_date                         | string        | Find only quotes created after specific date.<br /> Please use yyyy-MM-dd format, ex. 2015-12-25 |
+| to_date                           | string        | Find only quotes created before specific date.<br /> Please use yyyy-MM-dd format, ex. 2015-12-25 |
+| quote_no                          | string        | Find quote with matched quote number.       |
 | per_page                          | integer       | Number of quotes listed in one response message. Upper limit is 100. |
 | page                              | integer       | Page number of quotes listed in response message. Start from 0. |
 
 ##### Example Request
 ```JavaScript
 curl https://myaccounting.pymlo.com/businesses/dd921fea/quotes?per_page=50&page=2 \
+
+-H "Authorization: Bearer ACCESS_TOKEN"
+```
+
+##### Example Response
+
+
+##### Example Request
+```JavaScript
+curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/bef8/quotes?from_date=2017-01-01 \
 
 -H "Authorization: Bearer ACCESS_TOKEN"
 ```
@@ -79,24 +94,32 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/quotes/ql44/ \
 ##### Example Response
 
 
-### POST /businesses/{business_id}/quotes/ 
-Create a new quote for given business.
+### POST /businesses/{business_id}/partners/{partner_id}/quotes/ 
+Create a new quote for given partner and business.
 
 
 ##### Example Request
 ```JavaScript
-curl https://myaccounting.pymlo.com/businesses/dd921fea/quotes/ \
+curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/bef8/quotes/ \
   -H "Authorization: Bearer ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -X POST \
   -d {
-    "quote_no": "QTE00000044",
-    
-    
-    "default_revenue_account": {
-        "id": o89j
+    "quote_no": "QTE00000001",
+    "date": "2017-01-26",
+    "due_date": "2017-02-26",
+    "currency": {
+        "code": THB
     },
-    "default_selling_price": 30
+    "details": [
+      {
+        "product": {
+          "id": o89j
+        },
+        "quantity": 20,
+        "unit_price": 100
+      }
+    ]
   }
 ```
 ##### Example Response
@@ -115,15 +138,31 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/quotes/ \
   -X POST \
   -d {
     "id": ql44,
-    "name": "Pancake",
-    "sell": true,
-    "default_revenue_account": {
-        "id": o89j
+    "quote_no": "QTE00000001",
+    "date": "2017-01-26",
+    "due_date": "2017-02-26",
+    "currency": {
+        "code": THB
     },
-    "default_selling_price": 30,
-    "default_selling_tax": {
-        "id": ty1n
-    }
+    "customer": {
+        "id": bef8
+    },
+    "details": [
+      {
+        "product": {
+          "id": o89j
+        },
+        "quantity": 20,
+        "unit_price": 100
+      },
+      {
+        "product": {
+          "id": p7lk
+        },
+        "quantity": 5,
+        "unit_price": 400
+      }
+    ]
   }
 ```
 
