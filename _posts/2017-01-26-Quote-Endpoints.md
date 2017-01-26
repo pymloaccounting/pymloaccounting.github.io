@@ -9,10 +9,10 @@ categories: api-endpoints
 <h1>Quote Endpoints</h1>
 </header>
 
-You can manage quotations with "quotes" API endpoint, send quotes to negotiate selling price with customers.
+You can manage quotations with "quotes" API endpoints, send quotes to negotiate selling price with customers.
 
 A quote must have an unique quote number "quote_no" 
-and some items to sell, where all mandatory fields will be listed in **Attributes** below. 
+and some items to sell, where all required fields are listed in **Attributes** below. 
 
 When a quote is created, it will be "Draft". Please sign in Pymlo web system to send it to your customers.
 
