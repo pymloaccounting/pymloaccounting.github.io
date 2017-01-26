@@ -27,7 +27,7 @@ Other fields are optional. If you use "code" for managing products, it should be
 | [DELETE /businesses/{business_id}/products/{product_id}/](#delete-businessesbusiness_idproductsproduct_id) |  Delete a product |  
 
 ## Attributes
-| Endpoint                          | Type          | Description                                   |
+| Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | id                                | string        | Unique identifier of a product. Read only. You can use id to interact with specific product. |
 | name                              | string        | Name of a product.                            |
@@ -49,7 +49,7 @@ List all products of given business sorted by product name. You can use "buy", "
 Default page length is 100. If per_page = 50 and page = 2, the response message will show 101st - 150th products. 
 
 ##### URL parameters
-| Endpoint                          | Type          | Description                                   |
+| Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | sell                              | boolean       | True if you want to find only selling products. |
 | buy                               | boolean       | True if you want to find only buying products. |
