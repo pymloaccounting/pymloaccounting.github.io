@@ -17,7 +17,7 @@ where other fields are optional. If you use "code" for managing partners, it sho
 | -------------                                                   | ----- |
 | [GET /businesses/{business_id}/partners/](#get-businessesbusiness_idpartners)  | Get a list of business partners from given business |
 | [GET /businesses/{business_id}/partners/{partner_id}/](#get-businessesbusiness_idpartnerspartner_id) |  Get a specific business partner |
-| [POST /businesses/{business_id}/partner/](#post-businessesbusiness_idpartner) |  Create a new business partner for given business |
+| [POST /businesses/{business_id}/partners/](#post-businessesbusiness_idpartner) |  Create a new business partner for given business |
 | [PUT /businesses/{business_id}/partners/](#put-businessesbusiness_idpartners) |  Update an existing business partner |
 | [DELETE /businesses/{business_id}/partners/{partner_id}/](#delete-businessesbusiness_idpartnerspartner_id) |  Delete a business partner |  
 
@@ -102,7 +102,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/bef8/ \
 
 ##### Example Response
 
-### POST /businesses/{business_id}/partner/ 
+### POST /businesses/{business_id}/partners/ 
 Create a new business partner for given business.
 
 ##### Example Request
