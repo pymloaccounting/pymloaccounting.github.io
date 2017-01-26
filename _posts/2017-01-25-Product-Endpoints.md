@@ -30,7 +30,7 @@ Other fields are optional. If you use "code" for managing products, it should be
 | Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | id                                | string        | Unique identifier of a product. Read only. You can use id to interact with specific product. |
-| name                              | string        | Name of a product.                            |
+| name                              | string        | Required. Name of a product.                            |
 | code                              | string        | Code in your business to represent a product. |
 | description                       | string        | Description of a product.                     |
 | sell                              | boolean       | True if you are selling this product.         |
