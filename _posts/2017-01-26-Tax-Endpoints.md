@@ -35,7 +35,7 @@ List all taxes of given business sorted by tax code. You can use "code" as filte
 ##### URL parameters
 | Endpoint                          | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
-| code                              | string        | Find tax having matched tax code.             |
+| code                              | string        | Find tax with matched tax code.             |
 
 ##### Example Request
 ```JavaScript
