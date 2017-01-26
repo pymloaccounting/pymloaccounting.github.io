@@ -41,7 +41,7 @@ When a quote is created, it will be "Draft". Please sign in Pymlo web system to 
 | status                        | false         | string        | Current quote status.                         |
 | sub_total                     | false         | BigDecimal    | Quote subtotal amount. Sum of all discounted quote detail line amounts. |
 | tax_total                     | false         | BigDecimal    | Quote total tax amount. Sum of all discounted quote detail tax amounts. |
-| total                         | false         | BigDecimal    | Quote total amount. Sum of sub_total adds tax_total. |
+| total                         | false         | BigDecimal    | Quote total amount. Sum of sub_total and tax_total. |
 
 Moreover, at least one quote detail is required to show selling items.
 
@@ -51,10 +51,10 @@ Moreover, at least one quote detail is required to show selling items.
 | description                   | true          | string        | Description of a quote detail.                |
 | quantity                      | true, required| BigDecimal    | Number of products to sell.                   | 
 | unit_price                    | true, required| BigDecimal    | Unit price of a product to sell.              |
-| line_amount                   | false         | BigDecimal    | Product of quantity multiplies unit_price.    |
+| line_amount                   | false         | BigDecimal    | Quantity multiplies unit_price is line_amount.    |
 | tax                           | true          | object        | Tax required when selling a product.          |
-| tax_amount                    | false         | BigDecimal    | Product of line_amount multiplies latest tax rate.   |
-| total_amount                  | false         | BigDecimal    | Sum of line_amount adds tax_amount.   |
+| tax_amount                    | false         | BigDecimal    | line_amount multiplies latest tax rate is tax_amount. |
+| total_amount                  | false         | BigDecimal    | line_amount adds tax_amount is total_amount.   |
 
 
 ## Details
