@@ -27,18 +27,12 @@ For detail discussion about accounts in Pymlo, please refer to [Manage Chart of 
 ## Attributes
 | Endpoint                          | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
-| id                                | string        | Unique identifier of a product. Read only. You can use id to interact with specific product. |
-| name                              | string        | Name of a product.                            |
-| code                              | string        | Code in your business to represent a product. |
-| description                       | string        | Description of a product.                     |
-| is_selling                        | boolean       | True if you are selling this product.         |
-| is_buying                         | boolean       | True if you are buying this product.          |
-| default_revenue_account           | object        | Default account when selling a product. Please refer to Account Endpoints to get account id. |
-| default_selling_price             | BigDecimal    | Default price when selling a product. |
-| default_selling_tax               | object        | Default tax when selling a product. Please refer to Tax Endpoints to get tax id. |
-| default_expense_account           | object        | Default account when buying a product. Please refer to Account Endpoints to get account id. |
-| default_buying_price              | BigDecimal    | Default price when buying a product. |
-| default_buying_tax                | object        | Default tax when buying a product. Please refer to Tax Endpoints to get tax id. |
+| id                                | string        | Unique identifier of an account. Read only. You can use id to interact with specific account. |
+| name                              | string        | Name of an account.                            |
+| code                              | string        | Code in your business to represent an account. |
+| type                              | string        | Type of an account. Only valid for following: <br /> Assets, Assets -  Current, Assets - Investments, Assets - Fixed Assets, Assets - Other. <br /> Liabilities, Liabilities - Current, Liabilities - Long-term, Liabilities - Other. <br /> Equity. <br /> Revenues, Revenues - Operating, Revenues - Non-Operating. <br /> Expenses, Expenses - Cost of Sales, Expenses - Operating, Expenses - Non-Operating. |
+| payment_account                   | boolean       | True if this is a payment account.            |
+| contra_account                    | boolean       | True if this is a contra account.             |
 
 ## Details
 ### GET /businesses/{business_id}/accounts/
