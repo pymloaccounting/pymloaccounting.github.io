@@ -33,7 +33,7 @@ Moreover, you can go through partners API to access related documents:
 | /businesses/{business_id}/partners/{partner_id}/expenses/       |  Deal with expenses paid to a business partner |
 
 ## Attributes
-| Endpoint                          | Type          | Description                                   |
+| Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | id                                | string        | Unique identifier of a partner. Read only. You can use id to interact with specific business partner. |
 | name                              | string        | Name of a business partner.                   |
@@ -76,7 +76,7 @@ Moreover, you can go through partners API to access related documents:
 ### GET /businesses/{business_id}/partners/
 List all business partners of given business sorted by partner name. Default page length is 100. If per_page = 50 and page = 2, the response message will show 101st - 150th partners. 
 ##### URL parameters
-| Endpoint                          | Type          | Description                                   |
+| Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | per_page                          | integer       | Number of partners listed in one response message. Upper limit is 100. |
 | page                              | integer       | Page number of partners listed in response message. Start from 0. |
