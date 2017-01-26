@@ -15,7 +15,7 @@ You can check ISO country codes, country names, and their currencies by "countri
 | Endpoint                                                                          |  Description  |
 | -------------                                                                     | -----         |
 | [GET /countries/](#get-countries)                                                 | List all country codes and their names  |
-| [GET /countries/{country_code}/currencies/](../2017-01-26-Currency-Endpoints#get-countriescountry_codecurrencies) | Get currency of specific country        |
+| [GET /countries/{country_code}/currencies/](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Currency-Endpoints.md#get-countriescountry_codecurrencies#get-countriescountry_codecurrencies) | Get currency of specific country        |
 
 ## Attributes
 | Name                          | Type          | Description                                   |
