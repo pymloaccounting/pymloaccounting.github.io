@@ -33,8 +33,8 @@ Other fields are optional. If you use "code" for managing products, it should be
 | name                              | string        | Name of a product.                            |
 | code                              | string        | Code in your business to represent a product. |
 | description                       | string        | Description of a product.                     |
-| is_selling                        | boolean       | True if you are selling this product.         |
-| is_buying                         | boolean       | True if you are buying this product.          |
+| sell                              | boolean       | True if you are selling this product.         |
+| buy                               | boolean       | True if you are buying this product.          |
 | default_revenue_account           | object        | Default account when selling a product. Please refer to Account Endpoints to get account id. |
 | default_selling_price             | BigDecimal    | Default price when selling a product. |
 | default_selling_tax               | object        | Default tax when selling a product. Please refer to Tax Endpoints to get tax id. |
@@ -51,15 +51,15 @@ Default page length is 100. If per_page = 50 and page = 2, the response message 
 ##### URL parameters
 | Endpoint                          | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
-| is_selling                        | boolean       | True if you want to find only selling products. |
-| is_buying                         | boolean       | True if you want to find only buying products. |
+| sell                              | boolean       | True if you want to find only selling products. |
+| buy                               | boolean       | True if you want to find only buying products. |
 | code                              | string        | Find product having matched product code.     |
 | per_page                          | integer       | Number of products listed in one response message. Upper limit is 100. |
 | page                              | integer       | Page number of products listed in response message. Start from 0. |
 
 ##### Example Request
 ```JavaScript
-curl https://myaccounting.pymlo.com/businesses/dd921fea/products?is_buying=true&per_page=50&page=2 \
+curl https://myaccounting.pymlo.com/businesses/dd921fea/products?sell=true&per_page=50&page=2 \
 
 -H "Authorization: Bearer ACCESS_TOKEN"
 ```
