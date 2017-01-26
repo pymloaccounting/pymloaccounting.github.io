@@ -90,6 +90,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/partners?per_page=50&pag
 
 ##### Example Response
 
+
 ### GET /businesses/{business_id}/partners/{partner_id}/
 Get a specific business partner.
 
@@ -101,6 +102,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/bef8/ \
 ```
 
 ##### Example Response
+
 
 ### POST /businesses/{business_id}/partners/ 
 Create a new business partner for given business.
@@ -121,7 +123,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/ \
 
 
 ### PUT /businesses/{business_id}/partners/
-Update an existing business partner. Please upload **whole partner data** include unmodified fields.
+Update an existing business partner. Please upload **whole partner data** includeing unmodified fields.
 
 ##### Example Request
 ```JavaScript
@@ -139,6 +141,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/ \
 
 ##### Example Response
 
+
 ### DELETE /businesses/{business_id}/partners/{partner_id}/
 Delete a business partner.
 
@@ -150,3 +153,4 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/bef8/ \
 ```
 
 ##### Example Response
+
