@@ -10,7 +10,7 @@ categories: api-endpoints
 </header>
 
 The management of customers and vendors is included in business "partners" API endpoint. A partner must have a "name", 
-where other fields are optional.
+where other fields are optional. If you use "code" for managing partners, it should be unique.
 
 ## Overview
 | Endpoint                                                        |  Description  |
