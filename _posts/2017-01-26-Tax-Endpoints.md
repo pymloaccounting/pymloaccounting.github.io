@@ -21,7 +21,7 @@ You can retrieve existing taxes of your business in "taxes" API endpoint. A tax 
 | Endpoint                          | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | id                                | string        | Unique identifier of a tax. Read only. You can use id to interact with specific tax. |
-| code                              | string        | Code in your business to represent a tax.     |
+| code                              | string        | Required. Code in your business to represent a tax.     |
 | name                              | string        | Name of a tax.                                |
 | tax_id                            | string        | Tax payer ID.                                 |
 | recoverable                       | boolean       | True if it is a recoverable tax.              |
