@@ -36,7 +36,7 @@ Moreover, you can go through partners API to access related documents:
 | Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | id                                | string        | Unique identifier of a partner. Read only. You can use id to interact with specific business partner. |
-| name                              | string        | Name of a business partner.                   |
+| name                              | string        | Required. Name of a business partner.                   |
 | code                              | string        | Code in your business to represent a partner. |
 | customer                          | boolean       | True if you sell product to a partner.        |
 | vendor                            | boolean       | True if you buy product from a partner.       |
