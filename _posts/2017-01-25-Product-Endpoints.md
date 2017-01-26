@@ -66,6 +66,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/products?is_buying=true&
 
 ##### Example Response
 
+
 ### GET /businesses/{business_id}/products/{product_id}/
 Get a specific product.
 
@@ -78,8 +79,10 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/products/p1m3/ \
 
 ##### Example Response
 
+
 ### POST /businesses/{business_id}/products/ 
 Create a new product for given business.
+
 
 ##### Example Request
 ```JavaScript
@@ -100,7 +103,8 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/products/ \
 
 
 ### PUT /businesses/{business_id}/products/
-Update an existing product. Please upload **whole product data** include unmodified fields.
+Update an existing product. Please upload **whole product data** including unmodified fields.
+
 
 ##### Example Request
 ```JavaScript
@@ -124,8 +128,10 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/products/ \
 
 ##### Example Response
 
+
 ### DELETE /businesses/{business_id}/products/{product_id}/
 Delete a product.
+
 
 ##### Example Request
 ```JavaScript
@@ -135,3 +141,4 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/products/p1m3/ \
 ```
 
 ##### Example Response
+
