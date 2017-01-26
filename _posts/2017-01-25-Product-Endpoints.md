@@ -11,9 +11,9 @@ categories: api-endpoints
 
 The management of products to buy/sell is included in "products" API endpoint. A prodcut must have a "name".
 
-For a selling product, "is_selling" is true. "default_revenue_account" and "default_selling_price" are required. 
+For a selling product, "sell" is true. "default_revenue_account" and "default_selling_price" are required. 
 
-For a buying product, "is_buying" is true. "default_expense_account" and "default_buying_price" are required. 
+For a buying product, "buy" is true. "default_expense_account" and "default_buying_price" are required. 
 
 Other fields are optional. If you use "code" for managing products, it should be unique.
 
@@ -44,7 +44,7 @@ Other fields are optional. If you use "code" for managing products, it should be
 
 ## Details
 ### GET /businesses/{business_id}/products/
-List all products of given business sorted by product name. You can use "is_buy", "is_sell", and "code" as filters.
+List all products of given business sorted by product name. You can use "buy", "sell", and "code" as filters.
 
 Default page length is 100. If per_page = 50 and page = 2, the response message will show 101st - 150th products. 
 
@@ -92,7 +92,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/products/ \
   -X POST \
   -d {
     "name": "Pancake",
-    "is_sell": true,
+    "sell": true,
     "default_revenue_account": {
         "id": o89j
     },
@@ -115,7 +115,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/products/ \
   -d {
     "id": p1m3,
     "name": "Pancake",
-    "is_sell": true,
+    "sell": true,
     "default_revenue_account": {
         "id": o89j
     },
