@@ -25,7 +25,7 @@ For detail discussion about accounts in Pymlo, please refer to [Manage Chart of 
 | [DELETE /businesses/{business_id}/accounts/{account_id}/](#delete-businessesbusiness_idaccountsaccount_id) |  Delete an account |  
 
 ## Attributes
-| Endpoint                          | Type          | Description                                   |
+| Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | id                                | string        | Unique identifier of an account. Read only. You can use id to interact with specific account. |
 | name                              | string        | Name of an account.                            |
@@ -43,7 +43,7 @@ You can use "type", "sub_type", "code", and "payment_account" as filters.
 Default page length is 100. If per_page = 50 and page = 2, the response message will show 101st - 150th accounts. 
 
 ##### URL parameters
-| Endpoint                          | Type          | Description                                   |
+| Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | type                              | string        | Find accounts with given major type. Only valid for following: <br /> Assets, Liabilities, Equity, Revenues, Expenses. |
 | sub_type                          | string        | Find accounts with given sub type. Each major type has different valid sub types: <br />Assets: Current, Investments, Fixed assets, Other.<br /> Liabilities: Current, Long-term, Other.<br /> Revenues: Operating, Non-Operating.<br /> Expenses: Cost of Sales, Operating, Non-Operating. |
