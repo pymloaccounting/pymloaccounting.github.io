@@ -47,7 +47,7 @@ Default page length is 100. If per_page = 50 and page = 2, the response message 
 | -------------                     | -----         | -----                                         |
 | type                              | string        | Find accounts with given major type. Only valid for following: <br /> Assets, Liabilities, Equity, Revenues, Expenses. |
 | sub_type                          | string        | Find accounts with given sub type. Each major type has different valid sub types: <br />Assets: Current, Investments, Fixed assets, Other.<br /> Liabilities: Current, Long-term, Other.<br /> Revenues: Operating, Non-Operating.<br /> Expenses: Cost of Sales, Operating, Non-Operating. |
-| code                              | string        | Find account having matched account code.     |
+| code                              | string        | Find account with matched account code.     |
 | payment_account                   | boolean       | Find accounts which are payment account.     |
 | per_page                          | integer       | Number of products listed in one response message. Upper limit is 100. |
 | page                              | integer       | Page number of products listed in response message. Start from 0. |
