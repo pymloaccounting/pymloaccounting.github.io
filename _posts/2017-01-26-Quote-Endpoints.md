@@ -6,7 +6,7 @@ categories: api-endpoints
 ---
 
 <header>
-<h1>Product Endpoints</h1>
+<h1>Quote Endpoints</h1>
 </header>
 
 You can manage quotations with "quotes" API endpoint, send quotes to negotiate selling price with customers.
@@ -27,26 +27,41 @@ When a quote is created, it will be "Draft". Please sign in Pymlo web system to 
 | [DELETE /businesses/{business_id}/quotes/{quote_id}/](#delete-businessesbusiness_idquotesquote_id) |  Delete a quote |  
 
 ## Attributes
-| Name                              | Type          | Description                                   |
-| -------------                     | -----         | -----                                         |
-| id                                | string        | Unique identifier of a product. Read only. You can use id to interact with specific product. |
-| name                              | string        | Name of a product.                            |
-| code                              | string        | Code in your business to represent a product. |
-| description                       | string        | Description of a product.                     |
-| sell                              | boolean       | True if you are selling this product.         |
-| buy                               | boolean       | True if you are buying this product.          |
-| default_revenue_account           | object        | Default account when selling a product. Please refer to Account Endpoints to get account id. |
-| default_selling_price             | BigDecimal    | Default price when selling a product. |
-| default_selling_tax               | object        | Default tax when selling a product. Please refer to Tax Endpoints to get tax id. |
-| default_expense_account           | object        | Default account when buying a product. Please refer to Account Endpoints to get account id. |
-| default_buying_price              | BigDecimal    | Default price when buying a product. |
-| default_buying_tax                | object        | Default tax when buying a product. Please refer to Tax Endpoints to get tax id. |
+| Name                          |  Editable     | Type          | Description                                   |
+| -------------                 | -----         | -----         | -----                                         |
+| id                            | false         | string        | Unique identifier of a quote. You can use id to interact with specific quote. |
+| quote_no                      | true, required| string        | Unique number of a quote.                     |
+| date                          | true, required| string        | Date of a quote.                              |
+| due_date                      | true, required| string        | Due date of a quote.                          |
+| currency                      | true, required| object        | Curreny used in a quote. Use ISO currency code. You can use Country and Currency endpoints or [ISO](https://www.currency-iso.org/en/home/tables/table-a1.html) to look up currency code. |
+| memo                          | true          | string        | Memo of a quote.                              |
+| customer                      | true, required| object        | Businesss partner that this quote is sent to. |
+| address_line_1                | false         | string        | First line of customer address.               |
+| address_line_2                | false         | string        | Second line of customer address.              |
+| status                        | false         | string        | Current quote status.                         |
+| sub_total                     | false         | BigDecimal    | Quote subtotal amount. Sum of all discounted quote detail line amounts. |
+| tax_total                     | false         | BigDecimal    | Quote total tax amount. Sum of all discounted quote detail tax amounts. |
+| total                         | false         | BigDecimal    | Quote total amount. Sum of sub_total adds tax_total. |
+
+Moreover, at least one quote detail is required to show selling items.
+
+| Name                          |  Editable     | Type          | Description                                   |
+| -------------                 | -----         | -----         | -----                                         |
+| product                       | true, required| object        | Product to sell in a quote detail.            |
+| description                   | true          | string        | Description of a quote detail.                |
+| quantity                      | true, required| BigDecimal    | Number of products to sell.                   | 
+| unit_price                    | true, required| BigDecimal    | Unit price of a product to sell.              |
+| line_amount                   | false         | BigDecimal    | Product of quantity multiplies unit_price.    |
+| tax                           | true          | object        | Tax required when selling a product.          |
+| tax_amount                    | false         | BigDecimal    | Product of line_amount multiplies latest tax rate.   |
+| total_amount                  | false         | BigDecimal    | Sum of line_amount adds tax_amount.   |
+
 
 ## Details
 ### GET /businesses/{business_id}/quotes/
-List all quotes of given business sorted by date created. 
+List all quotes of given business sorted by date. 
 ### GET /businesses/{business_id}/partners/{partner_id}/quotes/
-List all quotes of given partner and business sorted by date created. 
+List all quotes of given partner and business sorted by date. 
 
 You can use "from_date", "to_date", and "quote_no" as filters.
 
@@ -161,6 +176,9 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/quotes/ \
         },
         "quantity": 5,
         "unit_price": 400
+        "tax": {
+          "id": ty1n
+        },
       }
     ]
   }
