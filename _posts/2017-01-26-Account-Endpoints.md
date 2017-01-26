@@ -28,9 +28,9 @@ For detail discussion about accounts in Pymlo, please refer to [Manage Chart of 
 | Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | id                                | string        | Unique identifier of an account. Read only. You can use id to interact with specific account. |
-| name                              | string        | Name of an account.                            |
-| code                              | string        | Code in your business to represent an account. |
-| type                              | string        | Type of an account. Only valid for following: <br /> Assets, Assets -  Current, Assets - Investments, Assets - Fixed Assets, Assets - Other. <br /> Liabilities, Liabilities - Current, Liabilities - Long-term, Liabilities - Other. <br /> Equity. <br /> Revenues, Revenues - Operating, Revenues - Non-Operating. <br /> Expenses, Expenses - Cost of Sales, Expenses - Operating, Expenses - Non-Operating. |
+| name                              | string        | Required. Name of an account.                            |
+| code                              | string        | Required. Code in your business to represent an account. |
+| type                              | string        | Required. Type of an account. Only valid for following: <br /> Assets, Assets -  Current, Assets - Investments, Assets - Fixed Assets, Assets - Other. <br /> Liabilities, Liabilities - Current, Liabilities - Long-term, Liabilities - Other. <br /> Equity. <br /> Revenues, Revenues - Operating, Revenues - Non-Operating. <br /> Expenses, Expenses - Cost of Sales, Expenses - Operating, Expenses - Non-Operating. |
 | payment_account                   | boolean       | True if this is a payment account.            |
 | contra_account                    | boolean       | True if this is a contra account.             |
 
