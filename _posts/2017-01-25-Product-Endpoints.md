@@ -1,20 +1,28 @@
 ---
+layout: index
+title:  "Product Endpoints"
+date:   2017-01-25
+categories: api-endpoints
 ---
 
 <header>
-<h1>Lorem ipsum dolor sit amet</h1>
+<h1>Product Endpoints</h1>
 </header>
 
-## Section 1
+The management of products to buy/sell is included in "products" API endpoint. A prodcut must have a "name".
+For a selling product, "default_revenue_account" and "default_selling_price" are required. 
+For a buying product, "default_expense_account" and "default_buying_price" are required. 
+Other fields are optional. If you use "code" for managing products, it should be unique.
 
-### Vivamus ac auctor eros
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut neque sit amet neque facilisis condimentum. Suspendisse posuere risus at mi lacinia, ac cursus turpis dignissim. Vivamus non dictum felis. Ut tincidunt augue id ullamcorper vestibulum.
+## Overview
+| Endpoint                                                        |  Description  |
+| -------------                                                   | ----- |
+| [GET /businesses/{business_id}/products/](#get-businessesbusiness_idproducts) | Get a list of products from given business |
+| [GET /businesses/{business_id}/products/{product_id}/](#get-businessesbusiness_idproductsproduct_id) |  Get a specific product |
+| [POST /businesses/{business_id}/products/](#post-businessesbusiness_idproduct) |  Create a new product for given business |
+| [PUT /businesses/{business_id}/products/](#put-businessesbusiness_idproducts) |  Update an existing product |
+| [DELETE /businesses/{business_id}/products/{product_id}/](#delete-businessesbusiness_idproductsproduct_id) |  Delete a product |  
 
-### In erat ligula
-
-In auctor tellus eu metus pellentesque, quis facilisis nibh placerat. Commodo in lorem eget, vulputate bibendum ante. Etiam vestibulum quis diam a dapibus. Integer fermentum nec purus sed dictum. Donec fermentum et sapien eget suscipit. Fusce consequat est a ex molestie ultrices.
-
-<img src="http://placehold.it/800x600">
 
 ## Section 2
 
@@ -24,58 +32,90 @@ Donec dictum hendrerit rutrum:
 
 <img src="http://placehold.it/800x600">
 
-## Section 3
+## Details
+### GET /businesses/{business_id}/products/
+List all products of given business sorted by product name. Default page length is 100. If per_page = 50 and page = 2, the response message will show 101st - 150th products. 
+##### URL parameters
+| Endpoint                          | Type          | Description                                   |
+| -------------                     | -----         | -----                                         |
+| per_page                          | integer       | Number of products listed in one response message. Upper limit is 100. |
+| page                              | integer       | Page number of products listed in response message. Start from 0. |
 
-Sed molestie augue libero, eget suscipit velit euismod ullamcorper.
+##### Example Request
+```JavaScript
+curl https://myaccounting.pymlo.com/businesses/dd921fea/products?is_buy=true&per_page=50&page=2 \
 
-`fibonacci.js`:
-
-```javascript
-var Fib = {
-    [Symbol.iterator]() {
-        var n1 = 1, n2 = 1;
-
-        return {
-            // make the iterator an iterable
-            [Symbol.iterator]() { return this; },
-
-            next() {
-                var current = n2;
-                n2 = n1;
-                n1 = n1 + current;
-                return { value: current, done: false };
-            },
-
-            return(v) {
-                console.log(
-                    "Fibonacci sequence abandoned."
-                );
-                return { value: v, done: true };
-            }
-        };
-    }
-};
-
-for (var v of Fib) {
-    console.log( v );
-
-    if (v > 50) break;
-}
-// 1 1 2 3 5 8 13 21 34 55
-// Fibonacci sequence abandoned.
+-H "Authorization: Bearer ACCESS_TOKEN"
 ```
 
-## Section 4
+##### Example Response
 
-### Pellentesque lobortis volutpat maximus 
+### GET /businesses/{business_id}/products/{product_id}/
+Get a specific product.
 
-Etiam condimentum:
+##### Example Request
+```JavaScript
+curl https://myaccounting.pymlo.com/businesses/dd921fea/products/p1m3/ \ 
 
-- orci non consequat elementum
-- tortor tellus viverra neque
-- id dignissim nibh nisl id magna
-- suspendisse aliquet dolor vehicula velit imperdiet
+-H "Authorization: Bearer ACCESS_TOKEN"
+```
 
-Suspendisse pretium molestie metus a consectetur. Sed nec interdum magna. Suspendisse efficitur, mi eget finibus mollis, orci tortor dignissim nisi, non vestibulum velit tellus ut odio. Praesent vitae sapien varius, mollis nunc vel, interdum nunc.
+##### Example Response
 
-<img src="http://placehold.it/800x600">
+### POST /businesses/{business_id}/products/ 
+Create a new product for given business.
+
+##### Example Request
+```JavaScript
+curl https://myaccounting.pymlo.com/businesses/dd921fea/products/ \
+  -H "Authorization: Bearer ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -X POST \
+  -d {
+    "name": "Pancake",
+    "is_sell": true,
+    "default_revenue_account": {
+        "id": o89j
+    },
+    default_selling_price": 30
+  }
+```
+##### Example Response
+
+
+### PUT /businesses/{business_id}/products/
+Update an existing product. Please upload **whole product data** include unmodified fields.
+
+##### Example Request
+```JavaScript
+curl https://myaccounting.pymlo.com/businesses/dd921fea/products/ \
+  -H "Authorization: Bearer ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -X POST \
+  -d {
+    "id": p1m3,
+    "name": "Pancake",
+    "is_sell": true,
+    "default_revenue_account": {
+        "id": o89j
+    },
+    default_selling_price": 30,
+    "default_selling_tax": {
+        "id": ty1n
+    },
+  }
+```
+
+##### Example Response
+
+### DELETE /businesses/{business_id}/products/{product_id}/
+Delete a product.
+
+##### Example Request
+```JavaScript
+curl https://myaccounting.pymlo.com/businesses/dd921fea/products/p1m3/ \
+  -H "Authorization: Bearer ACCESS_TOKEN"
+  -X DELETE
+```
+
+##### Example Response
