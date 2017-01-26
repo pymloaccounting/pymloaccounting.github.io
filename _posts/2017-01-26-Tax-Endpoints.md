@@ -18,7 +18,7 @@ You can retrieve existing taxes of your business in "taxes" API endpoint. A tax 
 | [GET /businesses/{business_id}/taxes/{tax_id}/](#get-businessesbusiness_idtaxestax_id) |  Get a specific tax      |
 
 ## Attributes
-| Endpoint                          | Type          | Description                                   |
+| Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | id                                | string        | Unique identifier of a tax. Read only. You can use id to interact with specific tax. |
 | code                              | string        | Required. Code in your business to represent a tax.     |
@@ -33,7 +33,7 @@ You can retrieve existing taxes of your business in "taxes" API endpoint. A tax 
 List all taxes of given business sorted by tax code. You can use "code" as filter.
 
 ##### URL parameters
-| Endpoint                          | Type          | Description                                   |
+| Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | code                              | string        | Find tax with matched tax code.             |
 
