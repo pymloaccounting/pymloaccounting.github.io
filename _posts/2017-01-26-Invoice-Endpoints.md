@@ -19,7 +19,7 @@ When an invoice is created, it will be "Draft". Please sign in Pymlo web system 
 ## Overview
 | Endpoint                                                        |  Description  |
 | -------------                                                   | ----- |
-| [GET /businesses/{business_id}/invoices/](#get-businessesbusiness_idinvoices) | Get a list of quotes from given business |
+| [GET /businesses/{business_id}/invoices/](#get-businessesbusiness_idinvoices) | Get a list of invoices from given business |
 | [GET /businesses/{business_id}/partners/{partner_id}/invoices/](#get-businessesbusiness_idpartnerspartner_idinvoices) | Get a list of invoices from given partner and business |
 | [GET /businesses/{business_id}/invoices/{invoice_id}/](#get-businessesbusiness_idinvoicesinvoice_id) |  Get a specific invoice |
 | [POST /businesses/{business_id}/partners/{partner_id}/invoices/](#post-businessesbusiness_idpartnerspartner_idinvoices) |  Create a new invoice for given partner and business |
@@ -158,7 +158,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/invoices/ \
   -X POST \
   -d {
     "id": ib0v,
-    "quote_no": "INV00000001",
+    "invoice_no": "INV00000001",
     "date": "2017-01-26",
     "due_date": "2017-02-26",
     "currency": {
