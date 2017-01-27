@@ -36,11 +36,12 @@ When an invoice is created, it will be "Draft". Please sign in Pymlo web system 
 | currency                      | true, required| object        | Curreny used in an invoice. Use ISO currency code. You can use Country and Currency endpoints or [ISO](https://www.currency-iso.org/en/home/tables/table-a1.html) to look up currency code. |
 | currency_rate                 | true, required| BigDecimal    | Curreny rate of invoice currency vs book keeping currency. |
 | po_so_no                      | true          | string        | Purchase order/shipping order number.         |
-| memo                          | true          | string        | Memo of an invoice.                           |
-| customer                      | true, required| object        | Businesss partner that this invoice is sent to. |
+| memo                          | true          | string        | Memo of a sales receipt.                      |
+| customer                      | true, required| object        | Businesss partner that this sales receipt is sent to. |
 | address_line_1                | false         | string        | First line of customer address.               |
 | address_line_2                | false         | string        | Second line of customer address.              |
 | status                        | false         | string        | Current invoice status.                       |
+| discount                      | true          | BigDecimal    | Discount rate(%).                             |
 | sub_total                     | false         | BigDecimal    | Invoice subtotal amount. Sum of all discounted invoice detail line amounts. |
 | tax_total                     | false         | BigDecimal    | Invoice total tax amount. Sum of all discounted invoice detail tax amounts. |
 | total                         | false         | BigDecimal    | Invoice total amount. Sum of sub_total and tax_total. |
@@ -55,10 +56,10 @@ Moreover, at least one invoice detail is required to show selling items.
 | description                   | true          | string        | Description of a invoice detail.              |
 | quantity                      | true, required| BigDecimal    | Number of products to sell.                   | 
 | unit_price                    | true, required| BigDecimal    | Unit price of a product to sell.              |
-| line_amount                   | false         | BigDecimal    | Quantity multiplies unit_price is line_amount.|
+| line_amount                   | false         | BigDecimal    | quantity multiplies unit_price is line_amount.|
 | tax                           | true          | object        | Tax required when selling a product.          |
 | tax_amount                    | false         | BigDecimal    | line_amount multiplies latest tax rate is tax_amount. |
-| total_amount                  | false         | BigDecimal    | line_amount adds tax_amount is total_amount.   |
+| total_amount                  | false         | BigDecimal    | Sum of line_amount and tax_amount.            |
 
 
 ## Details
