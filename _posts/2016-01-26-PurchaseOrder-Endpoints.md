@@ -33,7 +33,7 @@ When a purchase order is created, it will be "Draft". Please sign in Pymlo web s
 | po_no                         | true, required| string        | Unique number of a purchase order.                     |
 | date                          | true, required| string        | Date of a purchase order.                              |
 | currency                      | true, required| object        | Curreny used in a purchase order. Use ISO currency code. You can look up with [Country](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Country-Endpoints.md) and [Currency](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Currency-Endpoints.md) endpoints or [ISO](https://www.currency-iso.org/en/home/tables/table-a1.html). |
-| memo                          | true          | string        | Memo of a purchase order.                              |
+| memo                          | true          | string        | Message for vendor.                           |
 | vendor                        | true, required| object        | Businesss partner that this purchase order is sent to. |
 | address_line_1                | false         | string        | First line of vendor address.                 |
 | address_line_2                | false         | string        | Second line of vendor address.                |
