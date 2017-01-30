@@ -59,7 +59,7 @@ Moreover, at least one bill detail is required to show buying items.
 
 | Name                          |  Editable     | Type          | Description                                   |
 | -------------                 | -----         | -----         | -----                                         |
-| product                       | true, required| object        | Product to sell in a bill detail.             |
+| product                       | true, required| object        | Product to buy in a bill detail.             |
 | description                   | true          | string        | Description of a bill detail.                 |
 | quantity                      | true, required| BigDecimal    | Number of products to buy.                    | 
 | unit_price                    | true, required| BigDecimal    | Unit price of a product to buy.               |
