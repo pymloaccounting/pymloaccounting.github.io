@@ -105,7 +105,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/accounts/ \
   -H "Content-Type: application/json" \
   -X POST \
   -d {
-    "id": a6hj,
+    "id": "a6hj",
     "name": "Rent revenue",
     "code": "4204",
     "type": "Revenues - Non-Operating"
