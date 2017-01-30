@@ -127,7 +127,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/bef8/salesrecei
     "receipt_no": "RCT00000001",
     "date": "2017-01-26",
     "currency": {
-        "code": THB
+        "code": "THB"
     },
     "currenct_rate": 1,
     "payment_account": {
@@ -183,7 +183,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/salesreceipts/ \
           "id": "p7lk"
         },
         "quantity": 5,
-        "unit_price": 400
+        "unit_price": 400,
         "tax": {
           "id": "ty1n"
         }
