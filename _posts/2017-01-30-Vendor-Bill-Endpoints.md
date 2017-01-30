@@ -30,7 +30,7 @@ Moreover, you can go through bills API to access payments belonging to certain v
 
 | Endpoint                                                        |  Description  |
 | -------------                                                   | ----- |
-| [/businesses/{business_id}/bills/{bill_id}/exp_payments/](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-30-Expense-Payment-Endpoints.md)   | Deal with payments belonging to specified invoice |
+| [/businesses/{business_id}/bills/{bill_id}/exp_payments/](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-30-Expense-Payment-Endpoints.md)   | Deal with payments belonging to specified vendor bill |
 
 
 ## Attributes
@@ -84,7 +84,7 @@ Default page length is 100. If per_page = 50 and page = 2, the response message 
 | -------------                     | -----         | -----                                         |
 | from_date                         | string        | Find only vendor bills created after specific date.<br /> Please use yyyy-MM-dd format, ex. 2015-12-25 |
 | to_date                           | string        | Find only vendor bills created before specific date.<br /> Please use yyyy-MM-dd format, ex. 2015-12-25 |
-| bill_no                           | string        | Find vendor bill with matched invoice number.     |
+| bill_no                           | string        | Find vendor bill with matched bill number.     |
 | per_page                          | integer       | Number of vendor bills listed in one response message. Upper limit is 100. |
 | page                              | integer       | Page number listed in response message. Start from 0. |
 
