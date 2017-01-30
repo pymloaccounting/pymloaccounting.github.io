@@ -17,7 +17,7 @@ An income payment must contain amount, date, currency rate, and payment account.
 | Endpoint                                                        |  Description  |
 | -------------                                                   | ----- |
 | [GET /businesses/{business_id}/inc_payments/](#get-businessesbusiness_idinc_payments) | Get a list of income payments from given business |
-| [GET /businesses/{business_id}/invoices/{invoice_id}/inc_payments/](#get-businessesbusiness_idinvoicesinvoice_idinc_payments) | Get a list of income payments from given invoice and business |
+| [GET /businesses/{business_id}/invoices/{invoice_id}/inc_payments/](#get-businessesbusiness_idinvoicesinvoice_idinc_payments) | Get a list of income payments from given invoice |
 | [GET /businesses/{business_id}/inc_payments/{inc_payment_id}/](#get-businessesbusiness_idinc_paymentsinc_payment_id) |  Get a specific income payment |
 | [POST /businesses/{business_id}/invoices/{invoice_id}/inc_payments/](#post-businessesbusiness_idinvoicesinvoice_idinc_payments) |  Create a new income payment for given invoice |
 | [PUT /businesses/{business_id}/inc_payments/](#put-businessesbusiness_idinc_payments) |  Update an existing income payment |
