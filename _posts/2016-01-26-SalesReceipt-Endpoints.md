@@ -14,7 +14,7 @@ You can manage sales receipts with "salesreceipts" API endpoints, collect revenu
 A sales receipt must have an unique receipt number "receipt_no" 
 and some items to sell, where all required fields are listed in **Attributes** below. 
 
-When a sales receipt is created, it will be "PAID". Please sign in Pymlo web system to send it to your customers.
+When a sales receipt is created, it will be "Paid". Please sign in Pymlo web system to send it to your customers.
 
 ## Overview
 | Endpoint                                                        |  Description  |
