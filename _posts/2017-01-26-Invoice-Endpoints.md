@@ -20,7 +20,7 @@ When an invoice is created, it will be "Draft". Please sign in Pymlo web system 
 | Endpoint                                                        |  Description  |
 | -------------                                                   | ----- |
 | [GET /businesses/{business_id}/invoices/](#get-businessesbusiness_idinvoices) | Get a list of invoices from given business |
-| [GET /businesses/{business_id}/partners/{partner_id}/invoices/](#get-businessesbusiness_idpartnerspartner_idinvoices) | Get a list of invoices from given partner and business |
+| [GET /businesses/{business_id}/partners/{partner_id}/invoices/](#get-businessesbusiness_idpartnerspartner_idinvoices) | Get a list of invoices from given partner |
 | [GET /businesses/{business_id}/invoices/{invoice_id}/](#get-businessesbusiness_idinvoicesinvoice_id) |  Get a specific invoice |
 | [POST /businesses/{business_id}/partners/{partner_id}/invoices/](#post-businessesbusiness_idpartnerspartner_idinvoices) |  Create a new invoice for given partner and business |
 | [PUT /businesses/{business_id}/invoices/](#put-businessesbusiness_idinvoices) |  Update an existing invoice |
@@ -73,7 +73,7 @@ Moreover, at least one invoice detail is required to show selling items.
 ### GET /businesses/{business_id}/invoices/
 List all invoices of given business sorted by date. 
 ### GET /businesses/{business_id}/partners/{partner_id}/invoices/
-List all invoices of given partner and business sorted by date. 
+List all invoices of given partner sorted by date. 
 
 You can use "from_date", "to_date", and "invoice_no" as filters.
 
