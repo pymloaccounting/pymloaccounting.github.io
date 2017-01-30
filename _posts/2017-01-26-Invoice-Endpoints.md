@@ -136,7 +136,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/bef8/invoices/ 
     "date": "2017-01-26",
     "due_date": "2017-02-26",
     "currency": {
-        "code": THB
+        "code": "THB"
     },
     "currency_rate": 1,
     "details": [
@@ -165,34 +165,34 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/invoices/ \
   -H "Content-Type: application/json" \
   -X POST \
   -d {
-    "id": ib0v,
+    "id": "ib0v",
     "invoice_no": "INV00000001",
     "date": "2017-01-26",
     "due_date": "2017-02-26",
     "currency": {
-        "code": THB
+        "code": "THB"
     },
     "currency_rate": 1,
     "customer": {
-        "id": bef8
+        "id": "bef8"
     },
     "details": [
       {
         "product": {
-          "id": o89j
+          "id": "o89j"
         },
         "quantity": 20,
         "unit_price": 100
       },
       {
         "product": {
-          "id": p7lk
+          "id": "p7lk"
         },
         "quantity": 5,
-        "unit_price": 400
+        "unit_price": 400,
         "tax": {
-          "id": ty1n
-        },
+          "id": "ty1n"
+        }
       }
     ]
   }
