@@ -44,7 +44,7 @@ Moreover, you can go through invoices API to access payments belonging to certai
 | currency_rate                 | true, required| BigDecimal    | Curreny rate of invoice currency vs book keeping currency. |
 | po_so_no                      | true          | string        | Purchase order/shipping order number.         |
 | memo                          | true          | string        | Message for customer.                         |
-| customer                      | true, required| object        | Businesss partner that this sales receipt is sent to. |
+| customer                      | true, required| object        | Businesss partner that this invoice is sent to. |
 | address_line_1                | false         | string        | First line of customer address.               |
 | address_line_2                | false         | string        | Second line of customer address.              |
 | status                        | false         | string        | Current invoice status.                       |
