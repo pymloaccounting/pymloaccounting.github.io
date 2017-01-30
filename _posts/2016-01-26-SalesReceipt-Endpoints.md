@@ -40,7 +40,7 @@ When a sales receipt is created, it will be "PAID". Please sign in Pymlo web sys
 | address_line_1                | false         | string        | First line of customer address.               |
 | address_line_2                | false         | string        | Second line of customer address.              |
 | payment_account               | true, required| object        | Account of received payment. Use Account endpoints to get your payment account list. |
-| payment_method                | true          | string        | How you received the payment. Valid values are as follows: <br /> cash, cheque, credit_card, transfer, Paypal, Omise. |
+| payment_method                | true          | string        | How you received the payment. The following values are valid: <br /> cash, cheque, credit_card, transfer, Paypal, Omise. |
 | status                        | false         | string        | Current sales receipt status.                 |
 | discount                      | true          | BigDecimal    | Discount rate(%).                             |
 | sub_total                     | false         | BigDecimal    | Sales receipt subtotal amount. Sum of all discounted receipt detail line amounts. |
