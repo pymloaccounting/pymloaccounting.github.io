@@ -55,7 +55,7 @@ Default page length is 100. If per_page = 50 and page = 2, the response message 
 | buy                               | boolean       | True if you want to find only buying products. |
 | code                              | string        | Find product with matched product code.     |
 | per_page                          | integer       | Number of products listed in one response message. Upper limit is 100. |
-| page                              | integer       | Page number of products listed in response message. Start from 0. |
+| page                              | integer       | Page number listed in response message. Start from 0. |
 
 ##### Example Request
 ```JavaScript
