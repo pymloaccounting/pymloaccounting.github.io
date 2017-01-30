@@ -136,7 +136,7 @@ Delete an income payment.
 
 ##### Example Request
 ```JavaScript
-curl https://myaccounting.pymlo.com/businesses/dd921fea/invoices/pyu9/ \
+curl https://myaccounting.pymlo.com/businesses/dd921fea/inc_payments/pyu9/ \
   -H "Authorization: Bearer ACCESS_TOKEN"
   -X DELETE
 ```
