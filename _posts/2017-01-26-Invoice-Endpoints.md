@@ -86,7 +86,7 @@ Default page length is 100. If per_page = 50 and page = 2, the response message 
 | to_date                           | string        | Find only invoices created before specific date.<br /> Please use yyyy-MM-dd format, ex. 2015-12-25 |
 | invoice_no                        | string        | Find invoice with matched invoice number.     |
 | per_page                          | integer       | Number of invoices listed in one response message. Upper limit is 100. |
-| page                              | integer       | Page number of invoices listed in response message. Start from 0. |
+| page                              | integer       | Page number listed in response message. Start from 0. |
 
 ##### Example Request
 ```JavaScript
