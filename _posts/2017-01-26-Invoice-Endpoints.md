@@ -142,7 +142,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/bef8/invoices/ 
     "details": [
       {
         "product": {
-          "id": o89j
+          "id": "o89j"
         },
         "quantity": 20,
         "unit_price": 100
