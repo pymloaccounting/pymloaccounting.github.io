@@ -12,7 +12,7 @@ categories: api-endpoints
 You can manage purchase orders with "pos" API endpoints, send purchase orders to negotiate buying price with vendors.
 
 A purchase order must have an unique purchase order number "po_no" 
-and some items to BUY, where all required fields are listed in **Attributes** below. 
+and some items to buy, where all required fields are listed in **Attributes** below. 
 
 When a purchase order is created, it will be "Draft". Please sign in Pymlo web system to send it to your vendors.
 
