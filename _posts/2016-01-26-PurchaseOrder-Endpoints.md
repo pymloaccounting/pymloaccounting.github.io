@@ -122,12 +122,12 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/partners/bef8/pos/ \
     "po_no": "PO00000001",
     "date": "2017-01-26",
     "currency": {
-        "code": THB
+        "code": "THB"
     },
     "details": [
       {
         "product": {
-          "id": p1m4
+          "id": "p1m4"
         },
         "quantity": 20,
         "unit_price": 100
@@ -150,32 +150,32 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/pos/ \
   -H "Content-Type: application/json" \
   -X POST \
   -d {
-    "id": p0as,
+    "id": "p0as",
     "po_no": "PO00000001",
     "date": "2017-01-26",
     "currency": {
-        "code": THB
+        "code": "THB"
     },
     "customer": {
-        "id": bef8
+        "id": "bef8"
     },
     "details": [
       {
         "product": {
-          "id": p1m4
+          "id": "p1m4"
         },
         "quantity": 20,
         "unit_price": 100
       },
       {
         "product": {
-          "id": p8lk
+          "id": "p8lk"
         },
         "quantity": 5,
-        "unit_price": 400
+        "unit_price": 400,
         "tax": {
-          "id": ty1n
-        },
+          "id": "ty1n"
+        }
       }
     ]
   }
