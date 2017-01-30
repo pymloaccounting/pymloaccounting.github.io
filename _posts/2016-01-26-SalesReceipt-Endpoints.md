@@ -32,7 +32,7 @@ When a sales receipt is created, it will be "PAID". Please sign in Pymlo web sys
 | id                            | false         | string        | Unique identifier of a sales receipt. You can use id to interact with specific sales receipt. |
 | receipt_no                    | true, required| string        | Unique number of a sales receipt.             |
 | date                          | true, required| string        | Date of a sales receipt.                      |
-| currency                      | true, required| object        | Curreny used in a sales receipt. Use ISO currency code. You can use Country and Currency endpoints or [ISO](https://www.currency-iso.org/en/home/tables/table-a1.html) to look up currency code. |
+| currency                      | true, required| object        | Curreny used in a sales receipt. Use ISO currency code. You can look up with [Country](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Country-Endpoints.md) and [Currency](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Currency-Endpoints.md) endpoints or [ISO](https://www.currency-iso.org/en/home/tables/table-a1.html). |
 | currency_rate                 | true, required| BigDecimal    | Curreny rate of sales receipt currency vs book keeping currency. |
 | ref_no                        | true          | string        | Other related documents like orders, invoices, delivery notes. |
 | memo                          | true          | string        | Memo of a sales receipt.                      |
