@@ -35,7 +35,7 @@ When a sales receipt is created, it will be "PAID". Please sign in Pymlo web sys
 | currency                      | true, required| object        | Curreny used in a sales receipt. Use ISO currency code. You can look up with [Country](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Country-Endpoints.md) and [Currency](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Currency-Endpoints.md) endpoints or [ISO](https://www.currency-iso.org/en/home/tables/table-a1.html). |
 | currency_rate                 | true, required| BigDecimal    | Curreny rate of sales receipt currency vs book keeping currency. |
 | ref_no                        | true          | string        | Other related documents like orders, invoices, delivery notes. |
-| memo                          | true          | string        | Memo of a sales receipt.                      |
+| memo                          | true          | string        | Message for customer.                         |
 | customer                      | true, required| object        | Businesss partner that this sales receipt is sent to. |
 | address_line_1                | false         | string        | First line of customer address.               |
 | address_line_2                | false         | string        | Second line of customer address.              |
