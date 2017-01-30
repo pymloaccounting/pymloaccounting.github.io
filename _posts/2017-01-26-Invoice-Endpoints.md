@@ -26,6 +26,13 @@ When an invoice is created, it will be "Draft". Please sign in Pymlo web system 
 | [PUT /businesses/{business_id}/invoices/](#put-businessesbusiness_idinvoices) |  Update an existing invoice |
 | [DELETE /businesses/{business_id}/invoices/{invoice_id}/](#delete-businessesbusiness_idinvoicesinvoice_id) |  Delete an invoice |  
 
+Moreover, you can go through invoices API to access payements belonging to certain invoice:
+
+| Endpoint                                                        |  Description  |
+| -------------                                                   | ----- |
+| /businesses/{business_id}/invoices/{invoice_id}/inc_payments/   | Deal with payments belonging to specified invoice |
+
+
 ## Attributes
 | Name                          |  Editable     | Type          | Description                                   |
 | -------------                 | -----         | -----         | -----                                         |
