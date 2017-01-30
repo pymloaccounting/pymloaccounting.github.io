@@ -35,12 +35,12 @@ Other fields are optional. If you use "code" for managing products, it should be
 | description                       | string        | Description of a product.                     |
 | sell                              | boolean       | True if you are selling this product.         |
 | buy                               | boolean       | True if you are buying this product.          |
-| default_revenue_account           | object        | Default account when selling a product. Please refer to Account Endpoints to get account id. |
+| default_revenue_account           | object        | Default account when selling a product. Please refer to [Account](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Account-Endpoints.md) endpoints to get account id. |
 | default_selling_price             | BigDecimal    | Default price when selling a product. |
-| default_selling_tax               | object        | Default tax when selling a product. Please refer to Tax Endpoints to get tax id. |
-| default_expense_account           | object        | Default account when buying a product. Please refer to Account Endpoints to get account id. |
+| default_selling_tax               | object        | Default tax when selling a product. Please refer to [Tax](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Tax-Endpoints.md) endpoints to get tax id. |
+| default_expense_account           | object        | Default account when buying a product. Please refer to [Account](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Account-Endpoints.md) endpoints to get account id. |
 | default_buying_price              | BigDecimal    | Default price when buying a product. |
-| default_buying_tax                | object        | Default tax when buying a product. Please refer to Tax Endpoints to get tax id. |
+| default_buying_tax                | object        | Default tax when buying a product. Please refer to [Tax](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Tax-Endpoints.md) endpoints to get tax id. |
 
 ## Details
 ### GET /businesses/{business_id}/products/
