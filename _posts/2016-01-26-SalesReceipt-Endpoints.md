@@ -20,7 +20,7 @@ When a sales receipt is created, it will be "PAID". Please sign in Pymlo web sys
 | Endpoint                                                        |  Description  |
 | -------------                                                   | ----- |
 | [GET /businesses/{business_id}/salesreceipts/](#get-businessesbusiness_idsalesreceipts) | Get a list of sales receipts from given business |
-| [GET /businesses/{business_id}/partners/{partner_id}/salesreceipts/](#get-businessesbusiness_idpartnerspartner_idsalesreceipts) | Get a list of sales receipts from given partner and business |
+| [GET /businesses/{business_id}/partners/{partner_id}/salesreceipts/](#get-businessesbusiness_idpartnerspartner_idsalesreceipts) | Get a list of sales receipts from given partner |
 | [GET /businesses/{business_id}/salesreceipts/{salesreceipt_id}/](#get-businessesbusiness_idsalesreceiptssalesreceipt_id) |  Get a specific sales receipt |
 | [POST /businesses/{business_id}/partners/{partner_id}/salesreceipts/](#post-businessesbusiness_idpartnerspartner_idsalesreceipts) |  Create a new sales receipt for given partner and business |
 | [PUT /businesses/{business_id}/salesreceipts/](#put-businessesbusiness_idsalesreceipts) |  Update an existing sales receipt |
@@ -65,7 +65,7 @@ Moreover, at least one receipt detail is required to show selling items.
 ### GET /businesses/{business_id}/salesreceipts/
 List all sales receipts of given business sorted by date. 
 ### GET /businesses/{business_id}/partners/{partner_id}/salesreceipts/
-List all sales receipts of given partner and business sorted by date. 
+List all sales receipts of given partner sorted by date. 
 
 You can use "from_date", "to_date", and "receipt_no" as filters.
 
@@ -78,7 +78,7 @@ Default page length is 100. If per_page = 50 and page = 2, the response message 
 | to_date                           | string        | Find only sales receipts created before specific date.<br /> Please use yyyy-MM-dd format, ex. 2015-12-25 |
 | receipt_no                        | string        | Find sales receipt with matched receipt number.       |
 | per_page                          | integer       | Number of sales receipts listed in one response message. Upper limit is 100. |
-| page                              | integer       | Page number of sales receipts listed in response message. Start from 0. |
+| page                              | integer       | Page number listed in response message. Start from 0. |
 
 ##### Example Request
 ```JavaScript
