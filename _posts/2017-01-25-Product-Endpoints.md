@@ -94,7 +94,7 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/products/ \
     "name": "Pancake",
     "sell": true,
     "default_revenue_account": {
-        "id": o89j
+        "id": "o89j"
     },
     "default_selling_price": 30
   }
@@ -113,15 +113,15 @@ curl https://myaccounting.pymlo.com/businesses/dd921fea/products/ \
   -H "Content-Type: application/json" \
   -X POST \
   -d {
-    "id": p1m3,
+    "id": "p1m3",
     "name": "Pancake",
     "sell": true,
     "default_revenue_account": {
-        "id": o89j
+        "id": "o89j"
     },
     "default_selling_price": 30,
     "default_selling_tax": {
-        "id": ty1n
+        "id": "ty1n"
     }
   }
 ```
