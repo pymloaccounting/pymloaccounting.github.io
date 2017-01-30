@@ -20,7 +20,7 @@ When a quote is created, it will be "Draft". Please sign in Pymlo web system to 
 | Endpoint                                                        |  Description  |
 | -------------                                                   | ----- |
 | [GET /businesses/{business_id}/quotes/](#get-businessesbusiness_idquotes) | Get a list of quotes from given business |
-| [GET /businesses/{business_id}/partners/{partner_id}/quotes/](#get-businessesbusiness_idpartnerspartner_idquotes) | Get a list of quotes from given partner and business |
+| [GET /businesses/{business_id}/partners/{partner_id}/quotes/](#get-businessesbusiness_idpartnerspartner_idquotes) | Get a list of quotes from given partner |
 | [GET /businesses/{business_id}/quotes/{quote_id}/](#get-businessesbusiness_idquotesquote_id) |  Get a specific quote |
 | [POST /businesses/{business_id}/partners/{partner_id}/quotes/](#post-businessesbusiness_idpartnerspartner_idquotes) |  Create a new quote for given partner and business |
 | [PUT /businesses/{business_id}/quotes/](#put-businessesbusiness_idquotes) |  Update an existing quote |
@@ -61,7 +61,7 @@ Moreover, at least one quote detail is required to show selling items.
 ### GET /businesses/{business_id}/quotes/
 List all quotes of given business sorted by date. 
 ### GET /businesses/{business_id}/partners/{partner_id}/quotes/
-List all quotes of given partner and business sorted by date. 
+List all quotes of given partner sorted by date. 
 
 You can use "from_date", "to_date", and "quote_no" as filters.
 
@@ -74,7 +74,7 @@ Default page length is 100. If per_page = 50 and page = 2, the response message 
 | to_date                           | string        | Find only quotes created before specific date.<br /> Please use yyyy-MM-dd format, ex. 2015-12-25 |
 | quote_no                          | string        | Find quote with matched quote number.       |
 | per_page                          | integer       | Number of quotes listed in one response message. Upper limit is 100. |
-| page                              | integer       | Page number of quotes listed in response message. Start from 0. |
+| page                              | integer       | Page number listed in response message. Start from 0. |
 
 ##### Example Request
 ```JavaScript
