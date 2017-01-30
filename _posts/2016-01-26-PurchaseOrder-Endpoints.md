@@ -20,7 +20,7 @@ When a purchase order is created, it will be "Draft". Please sign in Pymlo web s
 | Endpoint                                                        |  Description  |
 | -------------                                                   | ----- |
 | [GET /businesses/{business_id}/pos/](#get-businessesbusiness_idpos) | Get a list of purchase orders from given business |
-| [GET /businesses/{business_id}/partners/{partner_id}/pos/](#get-businessesbusiness_idpartnerspartner_idpos) | Get a list of purchase orders from given partner and business |
+| [GET /businesses/{business_id}/partners/{partner_id}/pos/](#get-businessesbusiness_idpartnerspartner_idpos) | Get a list of purchase orders from given partner |
 | [GET /businesses/{business_id}/pos/{po_id}/](#get-businessesbusiness_idpospo_id) |  Get a specific purchase order |
 | [POST /businesses/{business_id}/partners/{partner_id}/pos/](#post-businessesbusiness_idpartnerspartner_idpos) |  Create a new purchase order for given partner and business |
 | [PUT /businesses/{business_id}/pos/](#put-businessesbusiness_idpos) |  Update an existing purchase order |
@@ -60,7 +60,7 @@ Moreover, at least one purchase order detail is required to show buying items.
 ### GET /businesses/{business_id}/pos/
 List all purchase orders of given business sorted by date. 
 ### GET /businesses/{business_id}/partners/{partner_id}/pos/
-List all purchase orders of given partner and business sorted by date. 
+List all purchase orders of given partner sorted by date. 
 
 You can use "from_date", "to_date", and "po_no" as filters.
 
@@ -73,7 +73,7 @@ Default page length is 100. If per_page = 50 and page = 2, the response message 
 | to_date                           | string        | Find only purchase orders created before specific date.<br /> Please use yyyy-MM-dd format, ex. 2015-12-25 |
 | po_no                             | string        | Find purchase order with matched purchase order number.       |
 | per_page                          | integer       | Number of purchase orders listed in one response message. Upper limit is 100. |
-| page                              | integer       | Page number of purchase orders listed in response message. Start from 0. |
+| page                              | integer       | Page number listed in response message. Start from 0. |
 
 ##### Example Request
 ```JavaScript
