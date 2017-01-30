@@ -40,7 +40,7 @@ Moreover, you can go through invoices API to access payments belonging to certai
 | invoice_no                    | true, required| string        | Unique number of an invoice.                  |
 | date                          | true, required| string        | Date of an invoice.                           |
 | due_date                      | true, required| string        | Due date of an invoice.                       |
-| currency                      | true, required| object        | Curreny used in an invoice. Use ISO currency code. You can use Country and Currency endpoints or [ISO](https://www.currency-iso.org/en/home/tables/table-a1.html) to look up currency code. |
+| currency                      | true, required| object        | Curreny used in an invoice. Use ISO currency code. You can look up with [Country](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Country-Endpoints.md) and [Currency](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Currency-Endpoints.md) endpoints or [ISO](https://www.currency-iso.org/en/home/tables/table-a1.html). |
 | currency_rate                 | true, required| BigDecimal    | Curreny rate of invoice currency vs book keeping currency. |
 | po_so_no                      | true          | string        | Purchase order/shipping order number.         |
 | memo                          | true          | string        | Memo of a sales receipt.                      |
