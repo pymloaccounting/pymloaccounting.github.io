@@ -33,7 +33,7 @@ When a quote is created, it will be "Draft". Please sign in Pymlo web system to 
 | quote_no                      | true, required| string        | Unique number of a quote.                     |
 | date                          | true, required| string        | Date of a quote.                              |
 | due_date                      | true, required| string        | Due date of a quote.                          |
-| currency                      | true, required| object        | Curreny used in a quote. Use ISO currency code. You can use Country and Currency endpoints or [ISO](https://www.currency-iso.org/en/home/tables/table-a1.html) to look up currency code. |
+| currency                      | true, required| object        | Curreny used in a quote. Use ISO currency code. You can look up with [Country](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Country-Endpoints.md) and [Currency](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Currency-Endpoints.md) endpoints or [ISO](https://www.currency-iso.org/en/home/tables/table-a1.html). |
 | memo                          | true          | string        | Memo of a quote.                              |
 | customer                      | true, required| object        | Businesss partner that this quote is sent to. |
 | address_line_1                | false         | string        | First line of customer address.               |
