@@ -30,7 +30,7 @@ Moreover, you can go through invoices API to access payements belonging to certa
 
 | Endpoint                                                        |  Description  |
 | -------------                                                   | ----- |
-| /businesses/{business_id}/invoices/{invoice_id}/inc_payments/   | Deal with payments belonging to specified invoice |
+| [/businesses/{business_id}/invoices/{invoice_id}/inc_payments/](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-30-Income-Payment-Endpoints.md)   | Deal with payments belonging to specified invoice |
 
 
 ## Attributes
