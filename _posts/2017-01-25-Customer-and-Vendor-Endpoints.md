@@ -25,11 +25,11 @@ Moreover, you can go through partners API to access related documents:
 
 | Endpoint                                                        |  Description  |
 | -------------                                                   | ----- |
-| /businesses/{business_id}/partners/{partner_id}/quotes/         |  Deal with quotes sent to a business partner |
-| /businesses/{business_id}/partners/{partner_id}/invoices/       |  Deal with invoices sent to a business partner |
-| /businesses/{business_id}/partners/{partner_id}/receipts/       |  Deal with receipts paid by a business partner |
-| /businesses/{business_id}/partners/{partner_id}/pos/            |  Deal with purchase orders sent to a business partner |
-| /businesses/{business_id}/partners/{partner_id}/bills/          |  Deal with vendor bills paid to a business partner |
+| [/businesses/{business_id}/partners/{partner_id}/quotes/](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Quote-Endpoints.md)         |  Deal with quotes sent to a business partner |
+| [/businesses/{business_id}/partners/{partner_id}/invoices/](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Invoice-Endpoints.md)       |  Deal with invoices sent to a business partner |
+| [/businesses/{business_id}/partners/{partner_id}/receipts/](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2016-01-26-SalesReceipt-Endpoints.md)       |  Deal with receipts paid by a business partner |
+| [/businesses/{business_id}/partners/{partner_id}/pos/](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2016-01-26-PurchaseOrder-Endpoints.md)            |  Deal with purchase orders sent to a business partner |
+| [/businesses/{business_id}/partners/{partner_id}/bills/](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-30-Vendor-Bill-Endpoints.md)          |  Deal with vendor bills paid to a business partner |
 | /businesses/{business_id}/partners/{partner_id}/expenses/       |  Deal with expenses paid to a business partner |
 
 ## Attributes
@@ -40,8 +40,8 @@ Moreover, you can go through partners API to access related documents:
 | code                              | string        | Code in your business to represent a partner. |
 | customer                          | boolean       | True if you sell product to a partner.        |
 | vendor                            | boolean       | True if you buy product from a partner.       |
-| default_selling_currency          | string        | Default currency when selling to a partner. Use ISO currency code. |
-| default_buying_currency           | string        | Default currency when buying from a partner. Use ISO currency code. |
+| default_selling_currency          | string        | Default currency when selling to a partner. Use ISO currency code. You can look up with [Country](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Country-Endpoints.md) and [Currency](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Currency-Endpoints.md) endpoints or [ISO](https://www.currency-iso.org/en/home/tables/table-a1.html). |
+| default_buying_currency           | string        | Default currency when buying from a partner. Use ISO currency code. You can look up with [Country](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Country-Endpoints.md) and [Currency](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-26-Currency-Endpoints.md) endpoints or [ISO](https://www.currency-iso.org/en/home/tables/table-a1.html). |
 | contact_name                      | string        | The person you contact with when interacting with a business partner. |
 | business_id                       | string        | Business id of a partner.                     |
 | phone                             | string        | Phone number of a partner.                    |
@@ -79,7 +79,7 @@ List all business partners of given business sorted by partner name. Default pag
 | Name                              | Type          | Description                                   |
 | -------------                     | -----         | -----                                         |
 | per_page                          | integer       | Number of partners listed in one response message. Upper limit is 100. |
-| page                              | integer       | Page number of partners listed in response message. Start from 0. |
+| page                              | integer       | Page number listed in response message. Start from 0. |
 
 ##### Example Request
 ```JavaScript
