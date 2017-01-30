@@ -59,8 +59,8 @@ Moreover, at least one invoice detail is required to show selling items.
 
 | Name                          |  Editable     | Type          | Description                                   |
 | -------------                 | -----         | -----         | -----                                         |
-| product                       | true, required| object        | Product to sell in a invoice detail.          |
-| description                   | true          | string        | Description of a invoice detail.              |
+| product                       | true, required| object        | Product to sell in an invoice detail.          |
+| description                   | true          | string        | Description of an invoice detail.              |
 | quantity                      | true, required| BigDecimal    | Number of products to sell.                   | 
 | unit_price                    | true, required| BigDecimal    | Unit price of a product to sell.              |
 | line_amount                   | false         | BigDecimal    | quantity multiplies unit_price is line_amount.|
