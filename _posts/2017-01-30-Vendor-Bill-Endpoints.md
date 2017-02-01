@@ -30,7 +30,7 @@ Moreover, you can go through bills API to access payments belonging to certain v
 
 | Endpoint                                                        |  Description  |
 | -------------                                                   | ----- |
-| [/businesses/{business_id}/bills/{bill_id}/exp_payments/](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-30-Expense-Payment-Endpoints.md)   | Deal with payments belonging to specified vendor bill |
+| [/businesses/{business_id}/bills/{bill_id}/billpayments/](https://github.com/pymloaccounting/pymloaccounting.github.io/blob/api-spec/_posts/2017-01-30-Bill-Payment-Endpoints.md)   | Deal with payments belonging to specified vendor bill |
 
 
 ## Attributes
